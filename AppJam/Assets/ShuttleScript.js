@@ -1,8 +1,8 @@
 #pragma strict
+var initialVelocity:Vector3;
 
 function Start () {
-	this.rigidbody.AddForce(-50,50,0);
-
+	rigidbody.AddForce(initialVelocity);
 }
 
 function Update () {

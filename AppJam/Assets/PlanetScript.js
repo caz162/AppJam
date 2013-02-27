@@ -7,6 +7,7 @@ var maxPopulation : int = 100;
 var call = false;
 var wasClicked : boolean;
 var planetName : String;
+var ship : Rigidbody;
 
 function Start () {
 }
@@ -31,10 +32,18 @@ function Update () {
 	}
 }
 
+function Fire(val:int){
+	if(val == 1){
+	var clone : Rigidbody = Instantiate(ship,Vector3(transform.position.x+3,transform.position.y,transform.position.z), Quaternion.identity);
+	population -= 5;
+	//clone.velocity = transform.forward*10;
+	}
+}
+
 function addpop(){
 if(population < maxPopulation){
 	population++;
-	yield WaitForSeconds(5);
+	yield WaitForSeconds(1);
 	call=false;
 	}
 	

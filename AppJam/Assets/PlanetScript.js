@@ -8,6 +8,9 @@ var call = false;
 var wasClicked : boolean;
 var planetName : String;
 var ship : Rigidbody;
+var inhabitants :occupied;
+enum occupied {allied,empty, hostile};
+
 
 function Start () {
 }
@@ -15,7 +18,7 @@ function Start () {
 function Update () {
 	var planets:GameObject[];
 	planets = GameObject.FindGameObjectsWithTag("GravityAffected");
-	if(call == false){
+	if(call == false && inhabitants == occupied.allied){
 	addpop();
 	call = true;
 	}
@@ -50,4 +53,15 @@ if(population < maxPopulation){
 	
 }
 
+function NewPlanet(){
+	inhabitants = occupied.allied;
+	population +=5;
+}
 
+function Hit(){
+	population -=5;
+	if(population <= 0){
+		inhabitants = occupied.empty;
+		population = 0;
+	}
+}

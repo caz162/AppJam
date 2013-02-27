@@ -2,9 +2,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PlanetScript.js">
     <Files>
-      <File FileName="Assets\PlanetScript.js" Line="24" Column="6" />
-      <File FileName="Assets\ShuttleScript.js" Line="16" Column="2" />
-      <File FileName="Assets\Click.js" Line="73" Column="2" />
+      <File FileName="Assets\PlanetScript.js" Line="40" Column="15" />
+      <File FileName="Assets\ShuttleScript.js" Line="33" Column="2" />
+      <File FileName="Assets\Click.js" Line="24" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

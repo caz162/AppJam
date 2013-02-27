@@ -44,7 +44,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraMve.js" />
      <Compile Include="Assets\Click.js" />
+     <Compile Include="Assets\Main.js" />
      <Compile Include="Assets\PlanetScript.js" />
      <Compile Include="Assets\ShuttleScript.js" />
   </ItemGroup>

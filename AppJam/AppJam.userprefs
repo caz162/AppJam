@@ -1,10 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PlanetScript.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Click.js">
     <Files>
-      <File FileName="Assets\PlanetScript.js" Line="40" Column="15" />
-      <File FileName="Assets\ShuttleScript.js" Line="33" Column="2" />
-      <File FileName="Assets\Click.js" Line="24" Column="2" />
+      <File FileName="Assets\Click.js" Line="28" Column="66" />
+      <File FileName="Assets\PlanetScript.js" Line="45" Column="2" />
+      <File FileName="Assets\ShuttleScript.js" Line="13" Column="23" />
+      <File FileName="Assets\CameraMve.js" Line="27" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

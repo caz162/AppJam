@@ -6,7 +6,6 @@ function Start () {
 }
 
 function Update () {
-
 }
 function OnCollisionEnter(theCollision : Collision){
 	if(theCollision.transform != this.transform.parent){
@@ -28,6 +27,8 @@ function OnCollisionEnter(theCollision : Collision){
 	Destroy(this.gameObject);
 	
 	}
-	else
-		Physics.IgnoreCollision(this.collider, this.transform.parent.collider);
+	else{
+		Debug.Log("Hitting Parent");
+		//Physics.IgnoreCollision(this.collider, this.transform.parent.collider);
+		}
 }

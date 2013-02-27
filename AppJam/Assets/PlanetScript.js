@@ -21,22 +21,23 @@ function Update () {
 	}
 	for(var planet:GameObject in planets){
 	if(this.gameObject != planet){
+	if(!planet.gameObject.transform.IsChildOf(this.gameObject.transform)){
 	var distance = (planet.transform.position - this.transform.position).magnitude;
 	var forward = (this.transform.position - planet.transform.position).normalized;
 		if (distance < radius){
 			var force = forward*(gravity*((this.rigidbody.mass * planet.rigidbody.mass)/Mathf.Pow(distance,2)));
 			planet.rigidbody.AddForce(force);
 			}
-
+		}
 	}
 	}
 }
 
 function Fire(val:int){
 	if(val == 1){
-	var clone : Rigidbody = Instantiate(ship,Vector3(transform.position.x+3,transform.position.y,transform.position.z), Quaternion.identity);
+	var clone : Rigidbody = Instantiate(ship,Vector3(transform.position.x+10,transform.position.y,transform.position.z), Quaternion.identity);
+	clone.transform.parent = gameObject.transform;
 	population -= 5;
-	//clone.velocity = transform.forward*10;
 	}
 }
 
@@ -49,6 +50,4 @@ if(population < maxPopulation){
 	
 }
 
-function OnCollisionEnter(theCollision : Collision){
-	Destroy(theCollision.gameObject);
-}
+

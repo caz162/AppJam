@@ -8,3 +8,9 @@ function Start () {
 function Update () {
 
 }
+function OnCollisionEnter(theCollision : Collision){
+	if(theCollision.transform != this.transform.parent)
+	Destroy(this.gameObject);
+	else
+		Physics.IgnoreCollision(this.collider, this.transform.parent.collider);
+}

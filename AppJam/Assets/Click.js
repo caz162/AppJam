@@ -2,15 +2,22 @@
 
 var selected : GameObject = null;
 var mouseOver = false;
+var aiming = false;
+var firing = false;
+var object: Rigidbody;
 
 function Start () {
-
+selected.SendMessage("Fire",1);
 }
 
 function Update () {
 
 if(selected ==  null){
 
+if(aiming)
+{
+	object.transform.position = Input.mousePosition;
+}
 if (Input.GetButtonDown("Fire1")) {
     var ray = Camera.main.ScreenPointToRay (Input.mousePosition);
     var hit : RaycastHit;
@@ -54,7 +61,8 @@ function OnGUI () {
 		if (GUI.Button (Rect (10,240,150,100), "Colonise")) 
 		{
 		Debug.Log("Firing");
-		selected.SendMessage("Fire",1);
+		var clone : Rigidbody = Instantiate(object,Vector3(selected.transform.position.x+10,selected.transform.position.y,selected.transform.position.z), Quaternion.identity);
+		clone.transform.parent = selected.gameObject.transform;
 		selected = null;
 	}
 	}
